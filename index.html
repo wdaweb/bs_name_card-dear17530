@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <title>Document</title>
+  <style>
+    .object-fit {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    h6 {
+      font-size: calc(12px + 1vw);
+    }
+
+    h5 {
+      font-size: calc(40px + 1vw);
+    }
+
+    .box {
+      position: relative;
+    }
+
+    .triangle {
+      position: absolute;
+      top: -50%;
+      left: 90%;
+      width: 250px;
+      height: 250px;
+      z-index: 1;
+    }
+
+    .triangle::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 270px;
+      height: 260px;
+      background-color: white;
+    }
+
+    .triangle:nth-child(2) {
+      top: 80%;
+      left: -25%;
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container vh-100 d-flex align-items-center justify-content-center">
+    <div class="box shadow" style="width: 65%;border: black 1px solid;">
+      <div class="triangle shadow d-none d-xl-block" style="transform: rotate(45deg);"></div>
+      <div class="triangle shadow d-none d-xl-block" style="transform: rotate(-135deg);"></div>
+      <div class="row m-0">
+        <div class="col-12 col-xl-5 p-0">
+          <img src="./horizontal.jpeg" class="object-fit">
+        </div>
+        <div class="col-12 col-xl p-5">
+          <h6 class="mb-0">Front-End Designer</h6>
+          <h5>Kaifu Chang</h5>
+          <h6 class="mb-5">泰 山 職 訓 局</h6>
+          <small> 住址：新北市泰山區貴子里致遠新村55之1號 <br>
+            電話：02-2901-8274 <br>
+            E-mail：Kaifu@example.cc<br>
+            網站：http://www.kaifu.example.cc/</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
